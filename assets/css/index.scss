@@ -1,0 +1,85 @@
+@import "global-styles";
+
+.App {
+    min-height: 100vh;
+    width: 100%;
+}
+
+main {
+    display: flex;
+}
+
+.countdown-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .time {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .time-upper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 40px 20px;
+            }
+
+            div:not(:last-of-type) p::after {
+                content: " :";
+            }
+        }
+
+        p {
+            font-size: 72px;
+            font-weight: 500;
+            color: $black;
+        }
+    }
+
+    h1 {
+        font-size: 36px;
+        color: $purple;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+    h2 {
+        font-size: 14px;
+        font-weight: 300;
+        color: $light-grey;
+    }
+
+    button {
+        color: $white;
+        height: 46px;
+        width: 160px;
+        padding: 10px 32px;
+        border-radius: 10px;
+        border: none;
+        background-color: $purple;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    button:hover {
+        background-color: #4d44f3;
+    }
+}
+
+.countdown-img {
+    width: 50%;
+}
+
+header img,
+footer img {
+    width: 100%;
+}
