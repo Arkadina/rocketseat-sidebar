@@ -4,8 +4,8 @@ const minutesP = document.querySelector(".minutes p");
 const secondsP = document.querySelector(".seconds p");
 
 var day = 0;
-var hours = 0;
-var minutes = 1;
+var hours = 23;
+var minutes = 44;
 var seconds = 1;
 var countInterval = null;
 
