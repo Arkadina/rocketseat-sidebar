@@ -7,76 +7,107 @@
 }
 
 .App {
+  width: 100%;
+}
+
+.grid-slider {
+  display: grid;
   min-height: 100vh;
-  width: 100%;
+  grid-template-columns: 250px auto;
+  transition: all 0.2s linear;
 }
-
-main {
-  display: flex;
-}
-
-.countdown-text {
-  width: 50%;
+.grid-slider .grid-left {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  background: #18c29c;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  transition: gird-template-columns 2s linear;
 }
-.countdown-text .time {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.grid-slider .grid-left .grid-left-upper {
+  padding: 18px 30px;
+  padding-left: 13px;
 }
-.countdown-text .time .time-upper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.countdown-text .time .time-upper div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 40px 20px;
-}
-.countdown-text .time .time-upper div:not(:last-of-type) p::after {
-  content: " :";
-}
-.countdown-text .time p {
-  font-size: 72px;
-  font-weight: 500;
-  color: #4d4c59;
-}
-.countdown-text h1 {
-  font-size: 36px;
-  color: #6c63ff;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-.countdown-text h2 {
-  font-size: 14px;
-  font-weight: 300;
-  color: #c8c8c8;
-}
-.countdown-text button {
-  color: #fff;
-  height: 46px;
-  width: 160px;
-  padding: 10px 32px;
-  border-radius: 10px;
-  border: none;
-  background-color: #6c63ff;
+.grid-slider .grid-left .grid-left-upper img {
   cursor: pointer;
-  transition: all 0.5s;
 }
-.countdown-text button:hover {
-  background-color: #4d44f3;
+.grid-slider .grid-left .grid-left-upper .grid-left-upper-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 13px;
+  margin-bottom: 26px;
 }
-
-.countdown-img {
-  width: 50%;
+.grid-slider .grid-left .grid-left-upper .grid-left-upper-mid ul {
+  list-style: none;
 }
-
-header img,
-footer img {
-  width: 100%;
+.grid-slider .grid-left .grid-left-upper .grid-left-upper-mid ul li:first-of-type {
+  background-color: #8ed7c6;
+}
+.grid-slider .grid-left .grid-left-upper .grid-left-upper-mid ul li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 12px;
+  padding: 13px;
+}
+.grid-slider .grid-left .grid-left-upper .grid-left-upper-mid ul li img {
+  margin-right: 13px;
+}
+.grid-slider .grid-left .grid-left-upper .grid-left-upper-mid ul li span {
+  font-size: 15px;
+  font-weight: 400;
+}
+.grid-slider .grid-left .grid-left-upper .grid-left-upper-mid ul li:hover span {
+  font-weight: 500;
+}
+.grid-slider .grid-left .grid-left-bottom {
+  background: #8ed7c6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 14px;
+  height: 60px;
+}
+.grid-slider .grid-left .grid-left-bottom .left {
+  display: flex;
+}
+.grid-slider .grid-left .grid-left-bottom .grid-bottom-person {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 5px;
+}
+.grid-slider .grid-left .grid-left-bottom div {
+  display: flex;
+  flex-direction: row;
+}
+.grid-slider .grid-left .grid-left-bottom div img {
+  margin-right: 10px;
+}
+.grid-slider .grid-left .grid-left-bottom div div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid-slider .grid-left .grid-left-bottom div .first-span {
+  font-weight: 500;
+  font-size: 15px;
+}
+.grid-slider .grid-left .grid-left-bottom div .second-span {
+  font-size: 12px;
+}
+.grid-slider .grid-left .grid-left-bottom img {
+  cursor: pointer;
+}
+.grid-slider .grid-right {
+  padding: 15px 18px;
+  background: #dce4e3;
+  color: #084236;
+  font-weight: 600;
+  font-size: 25px;
 }/*# sourceMappingURL=index.css.map */

@@ -1,5 +1,5 @@
-# Desafio Rocketseat - Countdown
+# Desafio Rocketseat - Sidebar
 
-<a href="https://efficient-sloth-d85.notion.site/Desafio-Countdown-4572ce6f5c91469abe0171f454a13e3f">Acessar desafio.</a>
+<a href="https://efficient-sloth-d85.notion.site/Desafio-Sidebar-f2251eb4976941eb958326ea327ffeb9">Acessar desafio.</a>
 
-<img src="https://i.ibb.co/J349VBR/img.png">
+<img src="https://i.ibb.co/4KT8vkt/img.png">

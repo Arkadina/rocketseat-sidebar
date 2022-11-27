@@ -1,54 +1,35 @@
-const dayP = document.querySelector(".day p");
-const hoursP = document.querySelector(".hours p");
-const minutesP = document.querySelector(".minutes p");
-const secondsP = document.querySelector(".seconds p");
+let grid = document.querySelector(".grid-slider");
+let btnimg = document.querySelector("#btnimg");
+let li = document.querySelector(".grid-left-upper-mid ul li");
+let liList = document.querySelectorAll(".grid-left-upper-mid ul li");
+let spanLi = document.querySelectorAll(".grid-left-upper-mid ul li span");
 
-var day = 0;
-var hours = 23;
-var minutes = 44;
-var seconds = 1;
-var countInterval = null;
+let upperTop = document.querySelector(".grid-left-upper-top");
+let upperTopImg = document.querySelector(".grid-left-upper-top img");
 
-function countdown() {
-    countInterval = setInterval(setTime, 1000);
-}
+let arrLength = liList.length;
 
-function setP() {
-    dayP.innerText = day;
-    hoursP.innerText = hours;
-    minutesP.innerText = minutes;
-    secondsP.innerText = seconds;
-}
+let bottom = document.querySelector(".grid-left-bottom");
+let bottomDiv = document.querySelector(".grid-left-bottom div");
 
-function setTime() {
-    seconds--;
-    if (seconds <= 0) {
-        if (day == 0 && seconds == 0 && minutes == 0 && hours == 0) {
-            clearInterval(countInterval);
-        } else {
-            seconds = 60;
-            if (minutes > 0) {
-                minutes--;
-            }
+var isSlided = 0;
+
+btnimg.addEventListener("click", () => {
+    if (isSlided === 0) {
+        grid.style.gridTemplateColumns = "78px auto";
+        upperTop.removeChild(upperTopImg);
+        bottom.removeChild(bottomDiv);
+        bottom.style.justifyContent = "center";
+        li.style.alignItems = "center";
+        li.style.backgroundColor = "transparent";
+        li.style.width = "100%";
+        for (let i = 0; i < arrLength; i++) {
+            console.log(i);
+            liList[i].removeChild(spanLi[i]);
         }
+        isSlided++;
+    } else {
+        isSlided;
+        document.location.reload();
     }
-
-    if (minutes <= 0) {
-        if (hours > 0) {
-            minutes = 60;
-            hours--;
-        }
-    }
-
-    if (hours <= 0) {
-        if (day > 0) {
-            hours = 24;
-            day--;
-        }
-    }
-    setP();
-    console.log(day, hours, minutes, seconds);
-}
-
-setP();
-countdown();
+});

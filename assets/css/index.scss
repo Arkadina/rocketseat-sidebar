@@ -1,85 +1,130 @@
 @import "global-styles";
 
 .App {
-    min-height: 100vh;
     width: 100%;
 }
 
-main {
-    display: flex;
-}
+.grid-slider {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 250px auto;
+    transition: all 0.2s linear;
 
-.countdown-text {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .time {
+    .grid-left {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
+        background: $green;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 
-        .time-upper {
+        transition: gird-template-columns 2s linear;
+
+        .grid-left-upper {
+            padding: 18px 30px;
+            padding-left: 13px;
+
+            img {
+                cursor: pointer;
+            }
+
+            .grid-left-upper-top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-left: 13px;
+                margin-bottom: 26px;
+            }
+
+            .grid-left-upper-mid {
+                ul {
+                    list-style: none;
+
+                    li:first-of-type {
+                        background-color: $light-green;
+                    }
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        margin: 5px;
+                        border-radius: 12px;
+                        padding: 13px;
+
+                        img {
+                            margin-right: 13px;
+                        }
+
+                        span {
+                            font-size: 15px;
+                            font-weight: 400;
+                        }
+                    }
+
+                    li:hover {
+                        span {
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+
+        .grid-left-bottom {
+            background: $light-green;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            padding: 8px 14px;
+            height: 60px;
+
+            .left {
+                display: flex;
+            }
+
+            .grid-bottom-person {
+                width: 45px;
+                height: 45px;
+                border-radius: 12px;
+                object-fit: cover;
+                margin-left: 5px;
+            }
 
             div {
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin: 40px 20px;
+                flex-direction: row;
+
+                img {
+                    margin-right: 10px;
+                }
+
+                div {
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .first-span {
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+
+                .second-span {
+                    font-size: 12px;
+                }
             }
 
-            div:not(:last-of-type) p::after {
-                content: " :";
+            img {
+                cursor: pointer;
             }
         }
-
-        p {
-            font-size: 72px;
-            font-weight: 500;
-            color: $black;
-        }
     }
 
-    h1 {
-        font-size: 36px;
-        color: $purple;
-        text-transform: uppercase;
-        letter-spacing: 5px;
+    .grid-right {
+        padding: 15px 18px;
+        background: $body-bg-color;
+        color: $text-color;
+        font-weight: 600;
+        font-size: 25px;
     }
-
-    h2 {
-        font-size: 14px;
-        font-weight: 300;
-        color: $light-grey;
-    }
-
-    button {
-        color: $white;
-        height: 46px;
-        width: 160px;
-        padding: 10px 32px;
-        border-radius: 10px;
-        border: none;
-        background-color: $purple;
-        cursor: pointer;
-        transition: all 0.5s;
-    }
-
-    button:hover {
-        background-color: #4d44f3;
-    }
-}
-
-.countdown-img {
-    width: 50%;
-}
-
-header img,
-footer img {
-    width: 100%;
 }
